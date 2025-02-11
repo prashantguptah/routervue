@@ -4,7 +4,8 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-  <header>
+  <div class="app">
+    <header>
     
 
     <div class="wrapper">
@@ -17,21 +18,31 @@ import { RouterLink, RouterView } from 'vue-router'
   </header>
 
   <RouterView />
+
+
+  </div>
+  
 </template>
 
 <style scoped>
 header {
   line-height: 1.5;
   max-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+.app{
+  display: flex;
+  flex-direction: column;
 
-
+}
 
 nav {
   width: 100%;
   font-size: 12px;
   text-align: center;
   margin-top: 2rem;
+  display: flex;
 }
 
 nav a.router-link-exact-active {
