@@ -1,5 +1,5 @@
-<script >
-import { RouterLink, RouterView } from 'vue-router'
+<script>
+import { RouterLink, RouterView } from "vue-router";
 import { mapState, mapActions } from "vuex";
 export default {
   computed: {
@@ -9,72 +9,45 @@ export default {
     ...mapActions(["logout"]),
   },
 };
-
 </script>
 
 <template>
   <div class="app">
     <header>
-
-    <!-- <div class="wrapper">
+      <!-- <div class="wrapper">
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
         <RouterLink to="/foo">click</RouterLink>
       </nav>
     </div> -->
-  </header>
-  <nav>
-    <router-link to="/">Vue</router-link> |
-    <router-link v-if="!user" to="/login">Login</router-link>
-    <router-link v-if="user" to="/" @click="logout">Logout</router-link>
-  </nav>
-  <router-view/>
+    
+    </header>
+    <div class="wrapper">
+    <nav class="flex items-center justify-between bg-yellow-500 text-white shadow-md">
+    
+      <router-link to="/" class="text-lg text-purple-600 hover:text-gray-200 px-8">
+        VUE
+      </router-link>
 
-  
-
-
+      
+      <div class="flex space-x-4">
+        <router-link v-if="!user" to="/login"  class="bg-white mx-4 text-black font-medium px-4 py-2 rounded-lg hover:bg-amber-200 shadow ">Login</router-link>
+        <router-link v-if="user" to="/" @click="logout"  class="bg-white mx-4 text-black font-medium px-4 py-2  hover:bg-amber-200 rounded-lg shadow">
+          Logout
+        </router-link>
+      </div>
+    </nav>
   </div>
-  
+
+    <router-view />
+  </div>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-.app{
-  display: flex;
-  flex-direction: column;
-
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-  display: flex;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
+.wrapper{
+  background-color: yellow;
+  width: 100vw;
 }
 
 @media (min-width: 1024px) {
@@ -100,7 +73,7 @@ nav a:first-of-type {
     font-size: 1rem;
 
     padding: 1rem 0;
-    margin-top: 1rem;
+    margin-top: 0rem;
   }
 }
 </style>

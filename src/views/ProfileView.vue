@@ -1,6 +1,7 @@
 <template>
-    <div class="container">
-      <h1 v-if="user">Welcome, {{ user.username }}</h1>
+    <div >
+      <h1 v-if="user" class="text-4xl font-bold text-center mt-10">Welcome, {{ user.username }}</h1>
+
       <h1 v-else>Loading...</h1>
     </div>
   </template>
@@ -17,19 +18,8 @@
   </script>
   
   <style scoped>
-  .container {
-    text-align: center;
-    margin-top: 50px;
-  }
-  nav {
-    display: flex;
-    justify-content: flex-end;
-    padding: 10px;
-  }
-  nav a {
-    margin-right: 20px;
-    text-decoration: none;
-    font-size: 18px;
-  }
+ 
+ 
+ 
   </style>
   

@@ -1,11 +1,9 @@
 <template>
-  <div class="container">
-    <nav>
-      <router-link v-if="!user" to="/login">Login</router-link>
-      <router-link v-if="user" to="/" @click="logout">Logout</router-link>
-    </nav>
+  <div >
+   
     
-    <h1>Home Page</h1>
+    <h1 class="text-5xl font-extrabold text-center text-blue-700 mt-12">Home Page</h1>
+
   </div>
 
 </template>
@@ -25,18 +23,7 @@ export default {
 </script>
 
 <style scoped>
-.container {
-  text-align: center;
-  margin-top: 50px;
-}
-nav {
-  display: flex;
-  justify-content: flex-end;
-  padding: 10px;
-}
-nav a {
-  margin-right: 20px;
-  text-decoration: none;
-  font-size: 18px;
-}
+
+
+
 </style>
