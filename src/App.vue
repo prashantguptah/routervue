@@ -8,13 +8,13 @@ import { RouterLink, RouterView } from 'vue-router'
     <header>
     
 
-    <div class="wrapper">
+    <!-- <div class="wrapper">
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
         <RouterLink to="/foo">click</RouterLink>
       </nav>
-    </div>
+    </div> -->
   </header>
 
   <RouterView />
