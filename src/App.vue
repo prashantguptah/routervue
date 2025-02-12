@@ -1,12 +1,20 @@
-<script setup>
+<script >
 import { RouterLink, RouterView } from 'vue-router'
+import { mapState, mapActions } from "vuex";
+export default {
+  computed: {
+    ...mapState(["user"]),
+  },
+  methods: {
+    ...mapActions(["logout"]),
+  },
+};
 
 </script>
 
 <template>
   <div class="app">
     <header>
-    
 
     <!-- <div class="wrapper">
       <nav>
@@ -16,8 +24,14 @@ import { RouterLink, RouterView } from 'vue-router'
       </nav>
     </div> -->
   </header>
+  <nav>
+    <router-link to="/">Vue</router-link> |
+    <router-link v-if="!user" to="/login">Login</router-link>
+    <router-link v-if="user" to="/" @click="logout">Logout</router-link>
+  </nav>
+  <router-view/>
 
-  <RouterView />
+  
 
 
   </div>
