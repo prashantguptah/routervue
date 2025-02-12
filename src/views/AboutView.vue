@@ -1,21 +1,21 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1>About Page</h1>
 
-    <nav>
+    <!-- <nav>
        <RouterLink to="/about/profile">Profile</RouterLink>
        <RouterLink to="/about/contact">Contact</RouterLink>
     </nav>
-    <RouterView></RouterView>
+    <RouterView></RouterView> -->
   </div>
 </template>
 
 <style>
 
-.about{
+/* .about{
   display: flex;
   flex-direction: column;
-}
+} */
 @media (min-width: 1024px) {
   .about {
     min-height: 100vh;
