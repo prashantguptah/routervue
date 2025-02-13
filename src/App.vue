@@ -1,27 +1,25 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-
+import { RouterLink, RouterView } from "vue-router";
 </script>
 
 <template>
   <div class="app">
     <header>
-    
-
-    <div class="wrapper">
+      <!-- <div class="wrapper">
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
         <RouterLink to="/foo">click</RouterLink>
       </nav>
-    </div>
-  </header>
+    </div> -->
+      <nav>
+        <router-link to="/">Home</router-link> |
+        <router-link to="/login">Login</router-link>
+      </nav>
+    </header>
 
-  <RouterView />
-
-
+    <RouterView />
   </div>
-  
 </template>
 
 <style scoped>
@@ -31,10 +29,9 @@ header {
   display: flex;
   flex-direction: column;
 }
-.app{
+.app {
   display: flex;
   flex-direction: column;
-
 }
 
 nav {
