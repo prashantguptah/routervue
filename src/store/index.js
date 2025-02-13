@@ -99,12 +99,12 @@ export default createStore({
     loading: (state) => state.loading,
     successMessage: (state) => state.successMessage,
     errorMessage: (state) => state.errorMessage,
-    getUserInfo: (state) => state.userData, // Full user object
-    getEmail: (state) => state.userData?.email || '',  // Extract email safely
-    getUsername: (state) => state.userData?.username || '', // Extract username
-    getImage: (state) => state.userData?.image || '' ,// Extract image
-    getFirstName: (state) => state.userData?.firstName  || '' ,// Extract image
-    getLastName: (state) => state.userData?.lastName || '' ,// Extract image
-    getGender: (state) => state.userData?.gender || '' ,// Extract image
+    getUserInfo: (state) => state.userData,
+    getEmail: (state) => state.userData?.email || '', 
+    getUsername: (state) => state.userData?.username || '', 
+    getImage: (state) => state.userData?.image || '' ,
+    getFirstName: (state) => state.userData?.firstName  || '' ,
+    getLastName: (state) => state.userData?.lastName || '' ,
+    getGender: (state) => state.userData?.gender || '' ,
   },
 });
