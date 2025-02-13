@@ -2,11 +2,12 @@
 import { RouterLink, RouterView } from "vue-router";
 import { mapState, mapActions } from "vuex";
 export default {
-  computed: {
-    ...mapState(["user"]),
-  },
+ 
   methods: {
     ...mapActions(["logout"]),
+  },
+  computed: {
+    ...mapState(["user"]),
   },
 };
 </script>
